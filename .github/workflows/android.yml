@@ -34,4 +34,10 @@ jobs:
       run: chmod +x android/gradlew
     - name: Build with Gradle
       run: cd android && ./gradlew build
+    
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: builds
+        path: android/build/outputs/apk
       

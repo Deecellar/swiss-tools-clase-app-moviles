@@ -2,8 +2,5 @@
     "compilerOptions": {
         "module": "esNext",
         "target": "esnext",
-    },
-    "exclude": [
-        "./node_modules"
-    ]
+    }
 }

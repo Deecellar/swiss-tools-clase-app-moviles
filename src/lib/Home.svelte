@@ -3,7 +3,6 @@
     export let navEnum;
 </script>
 
-
 <div class="pt-12 flex flex-col   ">
     <img
         class="w-full h-80 px-8 "
@@ -31,17 +30,25 @@
             class="w-20 h-20 px-8 "
             src="https://via.placeholder.com/2000"
             alt="placeholder  "
-            on:click=""
+            on:click={() => {
+                navTabSelected = navEnum.Conversor;
+            }}
         />
         <img
             class="w-20 h-20 px-8 "
             src="https://via.placeholder.com/2000"
             alt="placeholder  "
+            on:click={() => {
+                navTabSelected = navEnum.Guess;
+            }}
         />
         <img
             class="w-20 h-20 px-8 "
             src="https://via.placeholder.com/2000"
             alt="placeholder  "
+            on:click={() => {
+                navTabSelected = navEnum.Median;
+            }}
         />
     </div>
     <div class="pb-12 dark:bg-gray-900 " />

@@ -19,7 +19,7 @@
 <main class="h-screen dark:bg-gray-900  ">
   <div style="height: 93.99%;">
     {#if navTabSelected === nav.Home}
-      <Home />
+      <Home bind:navTabSelected bind:navEnum={nav} />
     {:else if navTabSelected === nav.Conversor}
       <Conversor />
     {:else if navTabSelected === nav.Guess}
@@ -49,7 +49,7 @@
         </ul>
       </nav>
     </footer>
-  {/if} 
+  {/if}
 </main>
 
 <style>

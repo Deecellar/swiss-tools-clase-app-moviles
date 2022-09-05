@@ -1,6 +1,4 @@
 <script>
-    import Picture from "./Picture.svelte";
-
     export let navTabSelected;
     export let navEnum;
     function getImageUrl(name) {

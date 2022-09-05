@@ -2,7 +2,7 @@
 ## Requirements by the class
 - [X] 40 commits
 - [X] ~~Webpack~~ Vite, is the same, but it was easier to setup
-- [X] SCSS - Inside the .svelte files, the CSS syntax used is SCSS
+- [X] SCSS - Inside the .svelte files, the CSS syntax used is SASS
 - [X] 100% offline
 - [X] Installation is easy
 

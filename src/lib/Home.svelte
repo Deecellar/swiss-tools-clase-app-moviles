@@ -10,7 +10,7 @@
         Bienvenido a
     </h1>
     <Picture
-        extraClass="full"
+        extraClass="full m-auto"
         src="/src/assets/swiss.png?preset=full"
         alt="Hero"
     />
@@ -57,7 +57,7 @@
         <div class="flex flex-row dark:bg-gray-600  ">
             <div class="container_image">
                 <img
-                    class="w-12 h-auto m-auto "
+                    class="w-32 xs:w-12 h-auto m-auto "
                     src="/src/assets/conversor.png"
                     alt="placeholder  "
                     on:click={() => {

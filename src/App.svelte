@@ -29,9 +29,9 @@
     {/if}
   </div>
   {#if navTabSelected !== nav.Home}
-    <footer class="w-full fixed inset-x-0 ">
+    <footer class="w-screen h-full  fixed inset-x-0 ">
       <nav class="  bg-blue-50 dark:bg-gray-800   ">
-        <ul class="flex w-full   bg-blue-50 dark:bg-gray-800">
+        <ul class="flex w-screen h-full   bg-blue-50 dark:bg-gray-800">
           {#each Object.keys(nav) as elem}
             <!-- svelte-ignore a11y-invalid-attribute -->
             <li
@@ -42,7 +42,13 @@
               <a
                 class="text-gray-100"
                 href="#"
-                on:click={() => (navTabSelected = elem)}>{elem}</a
+                on:click={() => (navTabSelected = elem)}
+              >
+                <img
+                  class="select_image  "
+                  src={"/src/assets/" + elem.toLowerCase() + ".png"}
+                  alt={"NavMenu" + elem}
+                /></a
               >
             </li>
           {/each}
@@ -52,5 +58,12 @@
   {/if}
 </main>
 
-<style>
+<style lang="sass">
+
+
+  
+  .select_image 
+      @apply w-12 h-12 aspect-square m-auto
+  
+
 </style>

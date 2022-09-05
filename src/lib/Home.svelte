@@ -5,7 +5,7 @@
     export let navEnum;
 </script>
 
-<div class="pt-12 flex flex-col   ">
+<div class="pt-12 flex flex-col dark:bg-gray-900  ">
     <h1 class="m-auto  dark:text-gray-100 text-gray-800 text-4xl pt-8 ">
         Bienvenido a
     </h1>
@@ -18,19 +18,19 @@
         Creadores
     </h1>
 
-    <div class="flex flex-row dark:bg-gray-600">
-        <div class="flex flex-col">
+    <div class="flex flex-row dark:bg-gray-600 mb-2">
+        <div class="flex flex-col m-auto">
             <Picture
-                extraClass="thumb"
+                extraClass="thumb m-auto"
                 src="/src/assets/median.png?preset=thumbnail"
                 alt="Dan Ellis Echavarria"
             />
 
             <p class="dark:text-gray-100 text-gray-800">Dan Ellis Echavarria</p>
         </div>
-        <div class="flex flex-col">
+        <div class="flex flex-col m-auto">
             <Picture
-                extraClass="thumb"
+                extraClass="thumb m-auto"
                 src="/src/assets/guess.png?preset=thumbnail"
                 alt="Christian Escobar Roqueme"
             />
@@ -39,9 +39,9 @@
                 Christian Escobar Roqueme
             </p>
         </div>
-        <div class="flex flex-col">
+        <div class="flex flex-col m-auto">
             <Picture
-                extraClass="thumb"
+                extraClass="thumb m-auto"
                 src="/src/assets/conversor.png?preset=thumbnail"
                 alt="Juan Esteban Herrera"
             />
@@ -49,36 +49,52 @@
             <p class="dark:text-gray-100 text-gray-800">Juan Esteban Herrera</p>
         </div>
     </div>
-    <div class="dark:bg-gray-800 flex flex-col">
+    <div class="dark:bg-gray-800 flex flex-col w-full">
         <h2 class="m-auto dark:text-gray-100 text-gray-800 text-2xl pt-8 ">
             Gadgets
         </h2>
 
-        <div class="flex flex-row dark:bg-gray-600 ">
-            <img
-                class="select_image  "
-                src="/src/assets/conversor.png"
-                alt="placeholder  "
-                on:click={() => {
-                    navTabSelected = navEnum.Conversor;
-                }}
-            />
-            <img
-                class="select_image  "
-                src="/src/assets/guess.png"
-                alt="placeholder  "
-                on:click={() => {
-                    navTabSelected = navEnum.Guess;
-                }}
-            />
-            <img
-                class="select_image  "
-                src="/src/assets/median.png"
-                alt="placeholder  "
-                on:click={() => {
-                    navTabSelected = navEnum.Median;
-                }}
-            />
+        <div class="flex flex-row dark:bg-gray-600  ">
+            <div class="container_image">
+                <img
+                    class="w-12 h-auto m-auto "
+                    src="/src/assets/conversor.png"
+                    alt="placeholder  "
+                    on:click={() => {
+                        navTabSelected = navEnum.Conversor;
+                    }}
+                />
+                <p class="dark:text-gray-100 text-gray-800 m-auto items-center">
+                    Conversor
+                </p>
+            </div>
+
+            <div class="container_image">
+                <img
+                    class="select_image  "
+                    src="/src/assets/guess.png"
+                    alt="placeholder  "
+                    on:click={() => {
+                        navTabSelected = navEnum.Guess;
+                    }}
+                />
+                <p class="dark:text-gray-100 text-gray-800 m-auto items-center">
+                    Guess the Number
+                </p>
+            </div>
+            <div class="container_image">
+                <img
+                    class="select_image  "
+                    src="/src/assets/median.png"
+                    alt="placeholder  "
+                    on:click={() => {
+                        navTabSelected = navEnum.Median;
+                    }}
+                />
+                <p class="dark:text-gray-100 text-gray-800 m-auto items-center">
+                    Median
+                </p>
+            </div>
         </div>
     </div>
 
@@ -109,6 +125,9 @@
 
 .select_image 
     @extend %img
-    @apply w-1/3 w-1/3
+    @apply w-auto h-auto m-auto
+
+.container_image
+    @apply w-full flex flex-col m-auto
 
 </style>

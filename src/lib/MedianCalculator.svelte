@@ -94,7 +94,7 @@
         />
     </div>
     <div class="flex flex-col items-center">
-        <VirtualList items={notes} let:index>
+        <VirtualList items={notes} height="14rem" let:index>
             <div class="flex flex-row items-center">
                 <div class="flex flex-col items-center px-2">
                     <label

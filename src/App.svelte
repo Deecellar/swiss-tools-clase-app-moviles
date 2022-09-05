@@ -13,6 +13,9 @@
   }
 
   const nav = createEnum(["Home", "Conversor", "Guess", "Median"]);
+  function getImageUrl(name) {
+    return new URL(`./assets/${name}.png`, import.meta.url).href;
+  }
   var navTabSelected = nav.Home;
 </script>
 
@@ -46,7 +49,7 @@
               >
                 <img
                   class="select_image  "
-                  src={"/src/assets/" + elem.toLowerCase() + ".png"}
+                  src={getImageUrl(elem.toLowerCase())}
                   alt={"NavMenu" + elem}
                 /></a
               >

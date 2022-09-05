@@ -3,6 +3,9 @@
 
     export let navTabSelected;
     export let navEnum;
+    function getImageUrl(name) {
+        return new URL(`../assets/${name}.png`, import.meta.url).href;
+    }
 </script>
 
 <div class="pt-12 flex flex-col dark:bg-gray-900  ">
@@ -11,7 +14,7 @@
     </h1>
     <Picture
         extraClass="full m-auto"
-        src="/src/assets/swiss.png?preset=full"
+        src="../assets/swiss.png?preset=full"
         alt="Hero"
     />
     <h1 class="m-auto dark:text-gray-100 text-gray-800 text-4xl pt-8 ">
@@ -22,7 +25,7 @@
         <div class="flex flex-col m-auto">
             <Picture
                 extraClass="thumb m-auto"
-                src="/src/assets/swiss.png?preset=thumbnail"
+                src="../assets/swiss.png?preset=thumbnail"
                 alt="Dan Ellis Echavarria"
             />
 
@@ -31,7 +34,7 @@
         <div class="flex flex-col m-auto">
             <Picture
                 extraClass="thumb m-auto"
-                src="/src/assets/swiss.png?preset=thumbnail"
+                src="../assets/swiss.png?preset=thumbnail"
                 alt="Christian Escobar Roqueme"
             />
 
@@ -42,7 +45,7 @@
         <div class="flex flex-col m-auto">
             <Picture
                 extraClass="thumb m-auto"
-                src="/src/assets/swiss.png?preset=thumbnail"
+                src="../assets/swiss.png?preset=thumbnail"
                 alt="Juan Esteban Herrera"
             />
 
@@ -58,7 +61,7 @@
             <div class="container_image">
                 <img
                     class="w-12 h-auto m-auto "
-                    src="/src/assets/conversor.png"
+                    src={getImageUrl("conversor", "")}
                     alt="placeholder  "
                     on:click={() => {
                         navTabSelected = navEnum.Conversor;
@@ -72,7 +75,7 @@
             <div class="container_image">
                 <img
                     class="select_image  "
-                    src="/src/assets/guess.png"
+                    src={getImageUrl("guess", "")}
                     alt="placeholder  "
                     on:click={() => {
                         navTabSelected = navEnum.Guess;
@@ -85,7 +88,7 @@
             <div class="container_image">
                 <img
                     class="select_image  "
-                    src="/src/assets/median.png"
+                    src={getImageUrl("median", "")}
                     alt="placeholder  "
                     on:click={() => {
                         navTabSelected = navEnum.Median;
@@ -97,7 +100,6 @@
             </div>
         </div>
     </div>
-
     <div class="pb-12 dark:bg-gray-900 " />
 </div>
 

@@ -13,7 +13,7 @@
   }
 
   const nav = createEnum(["Home", "Conversor", "Guess", "Median"]);
-  var navTabSelected = nav.Guess;
+  var navTabSelected = nav.Home;
 </script>
 
 <main class="h-screen dark:bg-gray-900  ">

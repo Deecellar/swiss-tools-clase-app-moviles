@@ -22,93 +22,104 @@
     }
 </script>
 
-<div class="flex items-center" style="padding-top: 50%;">
-    <div class="flex flex-col items-center">
-        <label for="units" class="dark:text-slate-300 text-gray-700">
-            Units
-        </label>
-        <select
-            name="Units"
-            bind:value={selected_unit_type}
-            id="units"
-            class="p-2 dark:bg-gray-50 bg-gray-200 mb-10 rounded-md w-1/2 "
-        >
-            {#each measures as element, i}
-                <option value={i}>{element}</option>
-            {/each}
-        </select>
-        <div class="">
-            <label for="first" class="dark:text-slate-300 text-gray-700 mr-20 ">
-                Unit 1
+<div class="flex flex-col">
+    <h1 class="m-auto dark:text-gray-100 text-gray-800 text-4xl pt-8 pb-32 ">
+        Conversor
+    </h1>
+    <div class="flex items-center">
+        <div class="flex flex-col items-center">
+            <label for="units" class="dark:text-slate-300 text-gray-700">
+                Units
             </label>
-            <label for="second" class="dark:text-slate-300 text-gray-700 ml-20">
-                Unit 2
-            </label>
-        </div>
-        <div class="flex mb-2">
             <select
-                name="First Unit"
-                id="first"
-                bind:value={first_selected_index}
-                class="p-2 dark:bg-gray-50 bg-gray-200 rounded-md  w-1/2 mr-2   "
+                name="Units"
+                bind:value={selected_unit_type}
+                id="units"
+                class="p-2 dark:bg-gray-50 bg-gray-200 mb-10 rounded-md w-1/2 "
             >
-                {#each list_of_elements as element, i}
-                    <option value={i}
-                        >{element.plural}
-                        {measures[selected_unit_type] == "current"
-                            ? ""
-                            : "(" + element.abbr + ")"}</option
-                    >
+                {#each measures as element, i}
+                    <option value={i}>{element}</option>
                 {/each}
             </select>
+            <div class="">
+                <label
+                    for="first"
+                    class="dark:text-slate-300 text-gray-700 mr-20 "
+                >
+                    Unit 1
+                </label>
+                <label
+                    for="second"
+                    class="dark:text-slate-300 text-gray-700 ml-20"
+                >
+                    Unit 2
+                </label>
+            </div>
+            <div class="flex mb-2">
+                <select
+                    name="First Unit"
+                    id="first"
+                    bind:value={first_selected_index}
+                    class="p-2 dark:bg-gray-50 bg-gray-200 rounded-md  w-1/2 mr-2   "
+                >
+                    {#each list_of_elements as element, i}
+                        <option value={i}
+                            >{element.plural}
+                            {measures[selected_unit_type] == "current"
+                                ? ""
+                                : "(" + element.abbr + ")"}</option
+                        >
+                    {/each}
+                </select>
 
-            <select
-                name="Second Unit"
-                id="second"
-                bind:value={second_selected_index}
-                class="p-2 dark:bg-gray-50 bg-gray-200 rounded-md w-1/2 ml-2"
-            >
-                {#each list_of_elements as element, i}
-                    <option value={i}
-                        >{element.plural}
-                        {measures[selected_unit_type] == "current"
-                            ? ""
-                            : "(" + element.abbr + ")"}</option
-                    >
-                {/each}
-            </select>
-        </div>
+                <select
+                    name="Second Unit"
+                    id="second"
+                    bind:value={second_selected_index}
+                    class="p-2 dark:bg-gray-50 bg-gray-200 rounded-md w-1/2 ml-2"
+                >
+                    {#each list_of_elements as element, i}
+                        <option value={i}
+                            >{element.plural}
+                            {measures[selected_unit_type] == "current"
+                                ? ""
+                                : "(" + element.abbr + ")"}</option
+                        >
+                    {/each}
+                </select>
+            </div>
 
-        <div class="flex items-center mt-10">
-            <label
-                for="firstval"
-                class="dark:text-slate-300 text-gray-700 mr-2 "
-            >
-                Input:
-            </label>
-            <input
-                type="number"
-                bind:value={input}
-                name="First Value"
-                id="firstval"
-                class="p-2 dark:bg-gray-50 bg-gray-200 rounded-md "
-            />
-        </div>
-        <div class="flex items-center mt-5">
-            <label
-                for="secondval"
-                class="dark:text-slate-300 text-gray-700 mr-2 "
-            >
-                Result:
-            </label>
-            <input
-                type="number"
-                bind:value={result}
-                name="Second Value"
-                id="secondval"
-                class="p-2 dark:disabled:bg-gray-200 disabled:bg-gray-300 rounded-md"
-                disabled
-            />
+            <div class="flex items-center mt-10">
+                <label
+                    for="firstval"
+                    class="dark:text-slate-300 text-gray-700 mr-2 "
+                >
+                    Input:
+                </label>
+                <input
+                    type="number"
+                    bind:value={input}
+                    name="First Value"
+                    id="firstval"
+                    class="p-2 dark:bg-gray-50 bg-gray-200 rounded-md "
+                />
+            </div>
+            <div class="flex items-center mt-5">
+                <label
+                    for="secondval"
+                    class="dark:text-slate-300 text-gray-700 mr-2 "
+                >
+                    Result:
+                </label>
+                <input
+                    type="number"
+                    bind:value={result}
+                    name="Second Value"
+                    id="secondval"
+                    class="p-2 dark:disabled:bg-gray-200 disabled:bg-gray-300 rounded-md"
+                    disabled
+                />
+            </div>
         </div>
     </div>
 </div>

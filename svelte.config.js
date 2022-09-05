@@ -1,9 +1,14 @@
 import preprocess from "svelte-preprocess";
-
+import * as nSass from "postcss-scss" 
 const config = {
   preprocess: [
     preprocess({
-      postcss: true,
+      postcss: {
+        parser: nSass,
+        syntax: "postcss-scss"
+      },
+      scss: true,
+
     }),
   ],
 };

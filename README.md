@@ -1,6 +1,6 @@
 # Swiss Tool, An application for multiple activities
 ## Requirements by the class
-- [ ] 40 commits
+- [X] 40 commits
 - [X] ~~Webpack~~ Vite, is the same, but it was easier to setup
 - [X] SCSS - Inside the .svelte files, the CSS syntax used is SCSS
 - [X] 100% offline

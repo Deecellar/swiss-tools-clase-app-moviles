@@ -57,7 +57,7 @@
         <div class="flex flex-row dark:bg-gray-600  ">
             <div class="container_image">
                 <img
-                    class="w-32 xs:w-12 h-auto m-auto "
+                    class="w-12 h-auto m-auto "
                     src="/src/assets/conversor.png"
                     alt="placeholder  "
                     on:click={() => {

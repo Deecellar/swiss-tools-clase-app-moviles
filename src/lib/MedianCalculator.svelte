@@ -3,7 +3,7 @@
     var list = new Array();
     var max = 5;
     var approved = 3;
-    var ammount_of_scores = 1;
+    var ammount_of_scores = 5;
     var result = 0;
     var notes = [{ percentage: 0, note: 0 }];
 
@@ -104,6 +104,7 @@
                         Nota
                     </label>
                     <input
+                        class="rounded-md py-1 pl-2"
                         type="number"
                         name="Note {index}"
                         id="note{index}"
@@ -120,6 +121,7 @@
                         Porcentaje
                     </label>
                     <input
+                        class="rounded-md py-1 pl-2"
                         type="number"
                         name="percentage {index}"
                         id="percentage{index}"

@@ -13,7 +13,7 @@
   }
 
   const nav = createEnum(["Home", "Conversor", "Guess", "Median"]);
-  var navTabSelected = nav.Home;
+  var navTabSelected = nav.Guess;
 </script>
 
 <main class="h-screen dark:bg-gray-900  ">
@@ -35,8 +35,8 @@
           {#each Object.keys(nav) as elem}
             <!-- svelte-ignore a11y-invalid-attribute -->
             <li
-              class="w-1/4 align-middle text-center pb-4 {elem == navTabSelected
-                ? 'bg-blue-200 dark:bg-gray-700'
+              class="w-1/3 align-middle text-center pb-4 {elem == navTabSelected
+                ? 'hidden'
                 : ''}"
             >
               <a

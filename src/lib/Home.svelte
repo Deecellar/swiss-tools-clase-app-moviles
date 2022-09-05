@@ -22,7 +22,7 @@
         <div class="flex flex-col m-auto">
             <Picture
                 extraClass="thumb m-auto"
-                src="/src/assets/median.png?preset=thumbnail"
+                src="/src/assets/swiss.png?preset=thumbnail"
                 alt="Dan Ellis Echavarria"
             />
 
@@ -31,7 +31,7 @@
         <div class="flex flex-col m-auto">
             <Picture
                 extraClass="thumb m-auto"
-                src="/src/assets/guess.png?preset=thumbnail"
+                src="/src/assets/swiss.png?preset=thumbnail"
                 alt="Christian Escobar Roqueme"
             />
 
@@ -42,7 +42,7 @@
         <div class="flex flex-col m-auto">
             <Picture
                 extraClass="thumb m-auto"
-                src="/src/assets/conversor.png?preset=thumbnail"
+                src="/src/assets/swiss.png?preset=thumbnail"
                 alt="Juan Esteban Herrera"
             />
 

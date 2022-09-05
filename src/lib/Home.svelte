@@ -55,39 +55,30 @@
         </h2>
 
         <div class="flex flex-row dark:bg-gray-600 ">
-            <div
+            <img
+                class="select_image  "
+                src="/src/assets/conversor.png"
+                alt="placeholder  "
                 on:click={() => {
                     navTabSelected = navEnum.Conversor;
                 }}
-            >
-                <Picture
-                    extraClass="select_image  "
-                    src="/src/assets/conversor.png?preset=original"
-                    alt="placeholder  "
-                />
-            </div>
-            <div
+            />
+            <img
+                class="select_image  "
+                src="/src/assets/guess.png"
+                alt="placeholder  "
                 on:click={() => {
                     navTabSelected = navEnum.Guess;
                 }}
-            >
-                <Picture
-                    extraClass="select_image  "
-                    src="/src/assets/guess.png?preset=original"
-                    alt="placeholder  "
-                />
-            </div>
-            <div
+            />
+            <img
+                class="select_image  "
+                src="/src/assets/median.png"
+                alt="placeholder  "
                 on:click={() => {
                     navTabSelected = navEnum.Median;
                 }}
-            >
-                <Picture
-                    extraClass="select_image"
-                    src="/src/assets/median.png?preset=original"
-                    alt="placeholder  "
-                />
-            </div>
+            />
         </div>
     </div>
 
@@ -118,6 +109,6 @@
 
 .select_image 
     @extend %img
-    @apply w-1/3 h-32
+    @apply w-1/3 w-1/3
 
 </style>

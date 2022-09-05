@@ -1,4 +1,5 @@
 <script>
+    import VirtualList from "./VirtualList.svelte";
     var list = new Array();
     var max = 5;
     var approved = 3;
@@ -51,41 +52,78 @@
     }
 </script>
 
-<input type="number" min="0" name="Max Value" id="max" bind:value={max} />
-<input
-    type="number"
-    {max}
-    min="0"
-    name="Approved Note"
-    id="approved"
-    bind:value={approved}
-/>
-<input
-    type="number"
-    name="scores"
-    id="scores"
-    min="1"
-    bind:value={ammount_of_scores}
-/>
-<table class="bg-slate-200">
-    {#each notes as note, i}
+<div class="flex flex-col pt-8 pb-10">
+    <div class="flex flex-col items-center">
+        <label for="max" class="dark:text-slate-300 text-gray-700">
+            Nota Maxima
+        </label>
         <input
             type="number"
-            name="Note {i}"
-            id="note{i}"
+            min="0"
+            name="Max Value"
+            id="max"
+            class="button"
+            bind:value={max}
+        />
+    </div>
+    <div class="flex flex-col items-center">
+        <label for="approved" class="dark:text-slate-300 text-gray-700">
+            Nota de aprobado
+        </label>
+        <input
+            type="number"
             {max}
             min="0"
-            bind:value={note.note}
+            name="Approved Note"
+            id="approved"
+            class="button"
+            bind:value={approved}
         />
+    </div>
+    <div class="flex flex-col items-center">
+        <label for="scores" class="dark:text-slate-300 text-gray-700">
+            Cantidad de notas
+        </label>
         <input
             type="number"
-            name="percentage {i}"
-            id="percentage{i}"
-            max={100.0}
-            min="0.01"
-            bind:value={note.percentage}
+            name="scores"
+            id="scores"
+            min="1"
+            class="button"
+            bind:value={ammount_of_scores}
         />
-    {/each}
-</table>
+    </div>
+    <div class="flex flex-col items-center">
+        <VirtualList items={notes} height="10rem" let:index>
+            <input
+                type="number"
+                name="Note {index}"
+                id="note{index}"
+                {max}
+                min="0"
+                bind:value={notes[index].note}
+            />
+            <input
+                type="number"
+                name="percentage {index}"
+                id="percentage{index}"
+                max={100.0}
+                min="0.01"
+                bind:value={notes[index].percentage}
+            />
+        </VirtualList>
+    </div>
 
-<p class={result >= approved ? "text-green-500" : "text-red-500"}>{result}</p>
+    <div class="flex flex-col items-center pt-4">
+        <p class="dark:text-slate-300 text-gray-700">Resultado</p>
+
+        <p class={result >= approved ? "text-green-500" : "text-red-500"}>
+            {result}
+        </p>
+    </div>
+</div>
+
+<style lang="sass">
+    .button
+      @apply p-2 dark:bg-gray-50 bg-gray-200 mb-10 rounded-md w-1/2
+</style>

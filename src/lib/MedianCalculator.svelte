@@ -94,23 +94,41 @@
         />
     </div>
     <div class="flex flex-col items-center">
-        <VirtualList items={notes} height="10rem" let:index>
-            <input
-                type="number"
-                name="Note {index}"
-                id="note{index}"
-                {max}
-                min="0"
-                bind:value={notes[index].note}
-            />
-            <input
-                type="number"
-                name="percentage {index}"
-                id="percentage{index}"
-                max={100.0}
-                min="0.01"
-                bind:value={notes[index].percentage}
-            />
+        <VirtualList items={notes} let:index>
+            <div class="flex flex-row items-center">
+                <div class="flex flex-col items-center px-2">
+                    <label
+                        for="note{index}"
+                        class="dark:text-slate-300 text-gray-700"
+                    >
+                        Nota
+                    </label>
+                    <input
+                        type="number"
+                        name="Note {index}"
+                        id="note{index}"
+                        {max}
+                        min="0"
+                        bind:value={notes[index].note}
+                    />
+                </div>
+                <div class="flex flex-col items-center">
+                    <label
+                        for="percentage{index}"
+                        class="dark:text-slate-300 text-gray-700"
+                    >
+                        Porcentaje
+                    </label>
+                    <input
+                        type="number"
+                        name="percentage {index}"
+                        id="percentage{index}"
+                        max={100.0}
+                        min="0.01"
+                        bind:value={notes[index].percentage}
+                    />
+                </div>
+            </div>
         </VirtualList>
     </div>
 

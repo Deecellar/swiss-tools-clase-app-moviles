@@ -12,29 +12,25 @@
     <h1 class="m-auto  dark:text-gray-100 text-gray-800 text-4xl pt-8 ">
         Bienvenido a
     </h1>
-    <Picture
-        extraClass="full m-auto"
-        src="../assets/swiss.png?preset=full"
-        alt="Hero"
-    />
+    <img class="full m-auto" src={getImageUrl("swiss")} alt="Hero" />
     <h1 class="m-auto dark:text-gray-100 text-gray-800 text-4xl pt-8 ">
         Creadores
     </h1>
 
     <div class="flex flex-row dark:bg-gray-600 mb-2">
         <div class="flex flex-col m-auto">
-            <Picture
-                extraClass="thumb m-auto"
-                src="../assets/swiss.png?preset=thumbnail"
+            <img
+                class="thumb m-auto"
+                src={getImageUrl("swiss")}
                 alt="Dan Ellis Echavarria"
             />
 
             <p class="dark:text-gray-100 text-gray-800">Dan Ellis Echavarria</p>
         </div>
         <div class="flex flex-col m-auto">
-            <Picture
-                extraClass="thumb m-auto"
-                src="../assets/swiss.png?preset=thumbnail"
+            <img
+                class="thumb m-auto"
+                src={getImageUrl("swiss")}
                 alt="Christian Escobar Roqueme"
             />
 
@@ -43,9 +39,9 @@
             </p>
         </div>
         <div class="flex flex-col m-auto">
-            <Picture
-                extraClass="thumb m-auto"
-                src="../assets/swiss.png?preset=thumbnail"
+            <img
+                class="thumb m-auto"
+                src={getImageUrl("swiss")}
                 alt="Juan Esteban Herrera"
             />
 

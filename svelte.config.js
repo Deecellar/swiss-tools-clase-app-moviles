@@ -1,5 +1,5 @@
 import preprocess from "svelte-preprocess";
-import * as nSass from "postcss-scss" 
+import * as nSass from "postcss-scss"
 const config = {
   preprocess: [
     preprocess({
@@ -8,7 +8,7 @@ const config = {
         syntax: "postcss-scss"
       },
       scss: true,
-
+      typescript: true,
     }),
   ],
 };

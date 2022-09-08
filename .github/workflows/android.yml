@@ -33,7 +33,7 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x android/gradlew
     - name: Build with Gradle
-      run: cd android && ./gradlew build && zip -9 -r apks.zip app/build/outputs/apk/
+      run: cd android && ./gradlew build && ./gradlew bundle && zip -9 -r apks.zip app/build/outputs/apk/ app/build/outputs/bundles/
     
     
     - name: Upload artifacts

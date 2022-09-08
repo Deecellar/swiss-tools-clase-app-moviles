@@ -3,6 +3,10 @@
   import GuessTheNumber from "./lib/GuessTheNumber.svelte";
   import Home from "./lib/Home.svelte";
   import MedianCalculator from "./lib/MedianCalculator.svelte";
+  import { onMount } from "svelte";
+  onMount(() => {
+    window.screen.orientation.lock("portrait");
+  });
   // Typescript
   function createEnum(values) {
     const enumObject = {};

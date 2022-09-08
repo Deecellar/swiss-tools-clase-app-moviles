@@ -1,6 +1,6 @@
 {
   "appId": "org.we.swissTools",
-  "appName": "swissTools",
+  "appName": "Swiss Tools",
   "webDir": "dist",
   "bundledWebRuntime": false
 }
